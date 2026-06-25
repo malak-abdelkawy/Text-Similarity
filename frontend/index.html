@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Similarity</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="shapes-container">
+      <div class="shape shape-circle"></div>
+      <div class="shape shape-triangle"></div>
+      <div class="shape shape-square"></div>
+    </div>
+
+    <div id="particles"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo-link">
+          <span class="logo-text">TEXT SIMILARITY</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#preprocessing" class="nav-link">Preprocessing</a></li>
+          <li><a href="#model" class="nav-link">Model</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="text-rotator">
+          <div class="text-set active">
+            <h1 class="glitch-text" data-text="BEYOND WORDS">BEYOND WORDS</h1>
+
+            <p class="subtitle">
+              From words to understanding using Natural Language Processing
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-container">
+        <a href="#experience" class="cta-button cta-primary"> Get Started </a>
+      </div>
+    </section>
+
+    <!-- PREPROCESSING -->
+    <section class="preprocessing" id="preprocessing">
+      <h2 class="section-title">Core Features</h2>
+
+      <div class="preprocessing-container">
+        <div class="preprocessing-tabs">
+          <div class="tab-item active">About Dataset</div>
+          <div class="tab-item">EDA</div>
+          <div class="tab-item">Text Preprocessing</div>
+          <div class="tab-item">Feature Engineering</div>
+        </div>
+
+        <div class="preprocessing-content">
+          <div class="content-panel active">
+            <h3>About Dataset</h3>
+            <p>We used the Quora Question Pairs dataset.</p>
+            <ul class="preprocessing-list">
+              <li>400K question pairs</li>
+              <li>classification problem</li>
+              <li>6 feature columns</li>
+            </ul>
+          </div>
+
+          <div class="content-panel">
+            <h3>EDA</h3>
+            <ul class="preprocessing-list">
+              <li>Class imbalance</li>
+              <li>Question length</li>
+              <li>Word frequency</li>
+              <li>Missing values</li>
+            </ul>
+          </div>
+
+          <div class="content-panel">
+            <h3>Text Preprocessing</h3>
+            <ul class="preprocessing-list">
+              <li>Lowercasing</li>
+              <li>Removing URLs</li>
+              <li>Stopwords removal</li>
+              <li>Lemmatization</li>
+            </ul>
+          </div>
+
+          <div class="content-panel">
+            <h3>Feature Engineering</h3>
+            <ul class="preprocessing-list">
+              <li>TF-IDF</li>
+              <li>Cosine similarity</li>
+              <li>Jaccard similarity</li>
+              <li>Length difference</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="viz-section">
+        <div class="viz-grid">
+          <div class="viz-card">
+            <img src="Images/wordcloud.png" />
+            <span>WordCloud Visualization</span>
+          </div>
+
+          <div class="viz-card">
+            <img src="Images/length_q1.png" />
+            <span>Question1 Length Distribution</span>
+          </div>
+
+          <div class="viz-card">
+            <img src="Images/length_q2.png" />
+            <span>Question2 Length Distribution</span>
+          </div>
+
+          <div class="viz-card">
+            <img src="Images/dup_analysis.png" />
+            <span>Duplicates Analysis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODEL -->
+    <section class="model" id="model">
+      <h2 class="section-title">Model Details</h2>
+
+      <div class="model-grid">
+        <div class="model-card large">
+          <h3>Problem Statement</h3>
+          <p>
+            Detect semantic similarity between two questions and get top 3
+            similar questions using NLP.
+          </p>
+        </div>
+
+        <div class="model-card">
+          <h3>Model</h3>
+          <p>
+            LightGBM (Light Gradient Boosting Machine) : learns patterns from
+            your similarity features and uses them to classify whether two
+            questions are similar.
+          </p>
+        </div>
+
+        <div class="model-card highlight">
+          <h3>Evaluation</h3>
+          <div class="metrics">
+            <div><span>Accuracy</span><b>80%</b></div>
+            <div><span>Recall</span><b>0.87</b></div>
+            <div><span>Precision</span><b>0.68</b></div>
+            <div><span>F1-Score</span><b>0.76</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+      <h2 class="section-title">Try our model</h2>
+
+      <div class="experience-box">
+        <div class="exp-tabs">
+          <div class="exp-tab active" data-mode="pair">Question Similarity</div>
+          <div class="exp-tab" data-mode="search">Find Similar Questions</div>
+          <div class="exp-tab" data-mode="websearch">Web Search</div>
+        </div>
+
+        <!-- MODE 1 -->
+        <div class="exp-panel active" id="pair">
+          <input id="question1" type="text" placeholder="Question 1" />
+          <input id="question2" type="text" placeholder="Question 2" />
+
+          <button id="predictBtn">Check Similarity</button>
+
+          <div class="result-box">
+            <div class="score-circle" id="pairScore">0.00</div>
+          </div>
+        </div>
+
+        <!-- MODE 2 -->
+        <div class="exp-panel" id="search">
+          <input
+            id="searchQuestion"
+            type="text"
+            placeholder="Enter your question"
+          />
+
+          <button id="searchBtn">Find Similar Questions</button>
+
+          <div class="results-list" id="resultsList"></div>
+        </div>
+        <!-- MODE 3 -->
+        <div class="exp-panel" id="websearch">
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-bubble bot">
+              <span>Hello, how can I help you today?</span>
+            </div>
+          </div>
+          <div class="chat-input-row">
+            <input
+              id="chatInput"
+              type="text"
+              placeholder="Type your question here..."
+            />
+            <button id="chatSendBtn">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Text Similarity</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
