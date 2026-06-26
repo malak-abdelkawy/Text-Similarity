@@ -60,7 +60,7 @@ To further enhance the user experience, the application integrates **Google Gemi
 
 ---
 
-## 🏗️ Architecture 
+## 🏗️ Architecture & Tech Stack
 
 ```text
 Text-Similarity/
