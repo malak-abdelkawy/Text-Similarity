@@ -18,26 +18,25 @@
 
 ### 🏠 Home Page
 
-<img src="images/home.png" width="100%">
+<img src="Demo/1.png" width="100%">
 
 ---
 
 ### 🔍 Question Similarity
 
-<img src="images/similarity.png" width="100%">
+<img src="Demo/2.png" width="100%">
 
 ---
 
 ### 🔎 Find Similar Questions
 
-<img src="images/search.png" width="100%">
+<img src="Demo/3.png" width="100%">
 
 ---
 
-### 🤖 Gemini AI Chat
+### 🤖 AI Chatbot
 
-<img src="images/chatbot.png" width="100%">
----
+<img src="Demo/4.png" width="100%">
 
 ## 🧠 What Is This?
 
@@ -65,6 +64,7 @@ To further enhance the user experience, the application integrates **Google Gemi
 
 ```text
 Text-Similarity/
+├── Backend/
 ├── app.py
 ├── model.pkl
 ├── vectorizer.pkl
@@ -86,7 +86,6 @@ Text-Similarity/
 | **Vectorization**      | TF-IDF                                |
 | **Similarity Metrics** | Cosine Similarity, Jaccard Similarity |
 | **AI Integration**     | Google Gemini API                     |
-| **Deployment**         | Railway                               |
 
 ---
 
@@ -114,15 +113,9 @@ Enter a single question and retrieve:
 
 ---
 
-### 🤖 AI Chat Assistant
+### 🤖 AI Chatbot
 
-Ask Gemini AI about:
-
-* Programming
-* Machine Learning
-* NLP concepts
-* General questions
-* Similar question explanations
+Ask Gemini AI about anything you want like its your Assistant
 
 ---
 
@@ -176,8 +169,6 @@ The project uses the **Quora Question Pairs** dataset.
 | -------- | ------------------------- |
 | Dataset  | Quora Question Pairs      |
 | Samples  | 400,000+ Question Pairs   |
-| Task     | Binary Classification     |
-| Target   | Duplicate / Non-Duplicate |
 
 ---
 
@@ -228,19 +219,88 @@ LightGBM Model
 
 ## 🚀 Getting Started
 
-> Keep your existing installation steps here.
+### Prerequisites
+
+Before running the project, make sure you have:
+
+* Python **3.10** or later
+* A **Google Gemini API Key**
 
 ---
 
-## 🌍 Deployment
+### 1. Create a Virtual Environment (Recommended)
 
-This application is deployed on **Railway**.
+**Windows**
 
-🔗 **Live Demo**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-YOUR_RAILWAY_LINK
+**macOS / Linux**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
 ---
+
+### 2. Install the requirements
+
+---
+
+### 3. Get Your Gemini API Key
+
+1. Go to **Google AI Studio**:
+   https://aistudio.google.com/
+
+2. Sign in with your Google account.
+
+3. Click **Get API Key**.
+
+4. Create a new API key.
+
+5. Copy your generated key.
+
+---
+
+### 4. Set the Environment Variable
+
+**Windows PowerShell**
+
+```powershell
+$env:GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+**macOS / Linux**
+
+```bash
+export GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+---
+
+### 5. Run the Application
+
+```bash
+python app.py
+```
+
+---
+
+### 6. Open Your Browser
+
+Navigate to:
+
+```
+http://localhost:5000
+```
+
+The application is now ready to use.
+
+---
+
 
 ## 🔮 Future Improvements
 
@@ -256,16 +316,9 @@ YOUR_RAILWAY_LINK
 
 ---
 
-## 📜 License
-
-This project is open source — feel free to use, modify, and build on it.
-
-See the **LICENSE** file for details.
-
----
 
 <div align="center">
 
-⭐ **If this project helped you, consider giving it a star!** ⭐
+⭐ **If this project helped you, consider giving it a star !** ⭐
 
 </div>
