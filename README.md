@@ -316,6 +316,12 @@ The application is now ready to use.
 
 ---
 
+## 👥 Team
+
+This project was developed collaboratively by a team of 6 members.
+
+---
+
 
 <div align="center">
 
