@@ -72,6 +72,9 @@ Text-Similarity/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
+├── src/
+│   ├── evaluate.py
+│   ├── train.py
 ├── notebook.ipynb
 ├── requirements.txt
 └── assets/
