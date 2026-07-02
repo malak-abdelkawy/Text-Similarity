@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+lightgbm
+scipy
+matplotlib
+wordcloud
+joblib
+Flask
+NLTK
